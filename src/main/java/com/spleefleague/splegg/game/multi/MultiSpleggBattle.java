@@ -4,7 +4,7 @@ import com.comphenix.protocol.wrappers.BlockPosition;
 import com.spleefleague.core.game.Arena;
 import com.spleefleague.core.game.battle.dynamic.DynamicBattle;
 import com.spleefleague.core.player.CorePlayer;
-import com.spleefleague.core.world.FakeUtils;
+import com.spleefleague.core.world.FakeUtil;
 import com.spleefleague.core.world.build.BuildStructure;
 import com.spleefleague.coreapi.chat.ChatColor;
 import com.spleefleague.splegg.Splegg;
@@ -44,8 +44,8 @@ public class MultiSpleggBattle extends DynamicBattle<MultiSpleggPlayer> {
         BlockPosition origin = getArena().getOrigin().toBlockPosition();
         for (BuildStructure structure : getArena().getStructures()) {
             gameWorld.setBaseBlocks(
-                    FakeUtils.translateBlocks(
-                            FakeUtils.rotateBlocks(structure.getFakeBlocks(), (int) getArena().getOrigin().getYaw()),
+                    FakeUtil.translateBlocks(
+                            FakeUtil.rotateBlocks(structure.getFakeBlocks(), (int) getArena().getOrigin().getYaw()),
                             origin));
         }
     }

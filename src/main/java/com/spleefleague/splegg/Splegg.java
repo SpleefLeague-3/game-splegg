@@ -3,7 +3,6 @@ package com.spleefleague.splegg;
 import com.spleefleague.core.Core;
 import com.spleefleague.core.chat.Chat;
 import com.spleefleague.core.game.arena.Arenas;
-import com.spleefleague.core.game.battle.Battle;
 import com.spleefleague.core.menu.InventoryMenuAPI;
 import com.spleefleague.core.menu.InventoryMenuContainerChest;
 import com.spleefleague.core.menu.InventoryMenuItem;
@@ -17,7 +16,7 @@ import com.spleefleague.splegg.commands.SpleggGunCommand;
 import com.spleefleague.splegg.game.SpleggGun;
 import com.spleefleague.splegg.game.SpleggMode;
 import com.spleefleague.splegg.player.SpleggPlayer;
-import net.md_5.bungee.api.chat.TextComponent;
+import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
@@ -57,8 +56,8 @@ public class Splegg extends CorePlugin {
     /**
      * @return Chat Prefix
      */
-    public TextComponent getChatPrefix() {
-        return new TextComponent(Chat.TAG_BRACE + "[" + Chat.TAG + "Splegg" + Chat.TAG_BRACE + "] ");
+    public Component getChatPrefix() {
+        return Component.text(Chat.TAG_BRACE + "[" + Chat.TAG + "Splegg" + Chat.TAG_BRACE + "] ");
     }
     
     public static Splegg getInstance() {

@@ -7,7 +7,6 @@
 package com.spleefleague.splegg.game;
 
 import com.google.common.collect.Sets;
-import com.mongodb.client.MongoCollection;
 import com.spleefleague.core.menu.InventoryMenuAPI;
 import com.spleefleague.core.menu.InventoryMenuItem;
 import com.spleefleague.core.menu.InventoryMenuUtils;
@@ -18,17 +17,13 @@ import com.spleefleague.core.player.CorePlayerCollectibles;
 import com.spleefleague.core.player.collectible.Holdable;
 import com.spleefleague.core.vendor.Vendorable;
 import com.spleefleague.core.vendor.Vendorables;
-import com.spleefleague.core.world.game.projectile.ProjectileStats;
-import com.spleefleague.core.world.global.GlobalWorld;
+import com.spleefleague.core.world.projectile.ProjectileStats;
 import com.spleefleague.coreapi.database.annotation.DBField;
 import com.spleefleague.coreapi.database.annotation.DBLoad;
-import com.spleefleague.splegg.Splegg;
 import com.spleefleague.splegg.game.classic.ClassicSpleggBattle;
 import com.spleefleague.splegg.game.multi.MultiSpleggBattle;
 import org.bson.Document;
 import org.bukkit.Material;
-import org.bukkit.entity.Snowball;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
@@ -261,7 +256,7 @@ public class SpleggGun extends Holdable {
     @Override
     public void updateDisplayItem() {
         super.updateDisplayItem();
-        projectileStats.updateProjectileItem();
+        projectileStats.getItem();
     }
     
 }

@@ -73,6 +73,13 @@ public class SpleggGun extends Holdable {
                 .setAvailability(cp -> cp.isInBattle()
                         && cp.getBattleState() == BattleState.BATTLER
                         && cp.getBattle() instanceof MultiSpleggBattle);
+
+        InventoryMenuAPI.createItemHotbar(5, "spleggGunWorldItem")
+                .setName(cp -> cp.getCollectibles().getActiveName(SpleggGun.class))
+                .setDisplayItem(cp -> cp.getCollectibles().getActiveIcon(SpleggGun.class))
+                .setDescription(cp -> cp.getCollectibles().getActive(SpleggGun.class).getDescription())
+                .setAvailability(cp -> cp.isInGlobal() && cp.getCollectibles().hasActive(SpleggGun.class) && cp.getCollectibles().isEnabled(SpleggGun.class))
+                .setAction(cp -> cp.getCollectibles().getActive(SpleggGun.class).onRightClick(cp));
     }
 
     public static SpleggGun getRandom(SpleggGun blacklist) {
@@ -213,6 +220,7 @@ public class SpleggGun extends Holdable {
     public void afterLoad() {
         super.afterLoad();
         safeProjectileStats = new ProjectileStats();
+        safeProjectileStats.gravity = true;
         safeProjectileStats.customModelDatas = new ArrayList<>(projectileStats.customModelDatas);
     }
 

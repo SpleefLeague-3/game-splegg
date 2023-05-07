@@ -11,13 +11,13 @@ import com.spleefleague.core.menu.hotbars.main.LeaderboardMenu;
 import com.spleefleague.core.player.CoreDBPlayer;
 import com.spleefleague.core.player.PlayerManager;
 import com.spleefleague.core.plugin.CorePlugin;
+import com.spleefleague.coreapi.chat.ChatColor;
 import com.spleefleague.splegg.commands.SpleggCommand;
 import com.spleefleague.splegg.commands.SpleggGunCommand;
 import com.spleefleague.splegg.game.SpleggGun;
 import com.spleefleague.splegg.game.SpleggMode;
 import com.spleefleague.splegg.player.SpleggPlayer;
 import net.kyori.adventure.text.Component;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
 /**

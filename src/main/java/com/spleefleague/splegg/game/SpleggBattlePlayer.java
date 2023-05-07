@@ -3,10 +3,10 @@ package com.spleefleague.splegg.game;
 import com.spleefleague.core.game.battle.Battle;
 import com.spleefleague.core.game.battle.BattlePlayer;
 import com.spleefleague.core.player.CorePlayer;
-import com.spleefleague.core.world.game.projectile.ProjectileStats;
+import com.spleefleague.core.world.projectile.ProjectileStats;
+import com.spleefleague.coreapi.chat.ChatColor;
 import com.spleefleague.splegg.Splegg;
 import joptsimple.internal.Strings;
-import org.bukkit.ChatColor;
 import org.bukkit.potion.PotionEffectType;
 
 /**

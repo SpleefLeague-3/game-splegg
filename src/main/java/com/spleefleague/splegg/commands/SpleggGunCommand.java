@@ -8,7 +8,7 @@ import com.spleefleague.core.player.CorePlayer;
 import com.spleefleague.core.player.rank.CoreRank;
 import com.spleefleague.core.util.CoreUtils;
 import com.spleefleague.core.vendor.Vendorables;
-import com.spleefleague.core.world.game.projectile.ProjectileStats;
+import com.spleefleague.core.world.projectile.ProjectileStats;
 import com.spleefleague.splegg.game.SpleggGun;
 
 import javax.annotation.Nullable;

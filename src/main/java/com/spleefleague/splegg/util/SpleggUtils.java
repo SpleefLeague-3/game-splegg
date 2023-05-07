@@ -1,10 +1,9 @@
 package com.spleefleague.splegg.util;
 
 import com.spleefleague.core.game.battle.Battle;
-import com.spleefleague.core.world.FakeUtils;
+import com.spleefleague.core.world.FakeUtil;
 import com.spleefleague.core.world.build.BuildStructure;
-import com.spleefleague.core.world.game.GameWorld;
-import com.spleefleague.splegg.game.SpleggArena;
+import com.spleefleague.core.world.projectile.game.GameWorld;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 
@@ -33,8 +32,8 @@ public class SpleggUtils {
         gameWorld.clear();
         for (BuildStructure structure : battle.getArena().getStructures()) {
             gameWorld.overwriteBlocks(
-                    FakeUtils.translateBlocks(
-                            FakeUtils.rotateBlocks(structure.getFakeBlocks(), (int) battle.getArena().getOrigin().getYaw()),
+                    FakeUtil.translateBlocks(
+                            FakeUtil.rotateBlocks(structure.getFakeBlocks(), (int) battle.getArena().getOrigin().getYaw()),
                             battle.getArena().getOrigin().toBlockPosition()));
         }
     }

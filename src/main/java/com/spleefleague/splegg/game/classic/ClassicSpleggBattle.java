@@ -8,7 +8,7 @@ package com.spleefleague.splegg.game.classic;
 
 import com.spleefleague.core.game.Arena;
 import com.spleefleague.core.game.battle.versus.VersusBattle;
-import com.spleefleague.core.world.FakeUtils;
+import com.spleefleague.core.world.FakeUtil;
 import com.spleefleague.core.world.build.BuildStructure;
 import com.spleefleague.splegg.Splegg;
 import com.spleefleague.splegg.game.SpleggMode;
@@ -43,8 +43,8 @@ public class ClassicSpleggBattle extends VersusBattle<ClassicSpleggPlayer> {
         SpleggUtils.setupBaseSettings(this);
         for (BuildStructure structure : getArena().getStructures()) {
             gameWorld.setBaseBlocks(
-                    FakeUtils.translateBlocks(
-                            FakeUtils.rotateBlocks(structure.getFakeBlocks(), (int) getArena().getOrigin().getYaw()),
+                    FakeUtil.translateBlocks(
+                            FakeUtil.rotateBlocks(structure.getFakeBlocks(), (int) getArena().getOrigin().getYaw()),
                             getArena().getOrigin().toBlockPosition()));
         }
     }
